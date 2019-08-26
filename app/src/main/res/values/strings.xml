@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">重点人员管控</string>
+    <string name="title_activity_query">QueryActivity</string>
+    <string name="title_activity_zaitaoguiji">ZaitaoguijiActivity</string>
+</resources>

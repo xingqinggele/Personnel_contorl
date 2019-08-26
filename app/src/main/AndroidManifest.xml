@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zhhl.personnel_contorl">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name="com.zhhl.personnel_contorl.app.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppThemeNo">
+
+        <!--原来的-->
+        <!--android:label="重点上访人员"-->
+        <!--android:theme="@style/AppTheme">-->
+        <activity
+            android:name="com.zhhl.personnel_contorl.mvp.view.activities.PetitionActivity"
+            android:theme="@style/AppThemeNo">
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+
+        </activity>
+        <activity
+            android:name="com.zhhl.personnel_contorl.mvp.view.activities.AtLargeActivity"
+            android:label="在逃人员"
+            android:theme="@style/AppTheme">
+
+        </activity>
+
+        <activity
+            android:name="com.zhhl.personnel_contorl.mvp.view.activities.ConcernedWithDrugsActivity"
+            android:label="涉毒人员"
+            android:theme="@style/AppTheme">
+
+        </activity>
+        <activity
+            android:name="com.zhhl.personnel_contorl.MainActivity"
+            android:launchMode="singleTask">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="smart.zhhl.com"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.zhhl.personnel_contorl.activity.CunguanActivity"
+            android:label="村官人员信息"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.zhhl.personnel_contorl.activity.CunguanguijiActivity"
+            android:label="村官人员"
+            android:theme="@style/AppThemeNo" />
+        <activity
+            android:name="com.zhhl.personnel_contorl.mvp.view.activities.PersonTrajectoryAnalysisActivity"
+            android:parentActivityName="com.zhhl.personnel_contorl.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.zhhl.personnel_contorl.activity.TimeSelectActivity"
+            android:theme="@style/MyTranslucentTheme" />
+        <activity android:name="com.zhhl.personnel_contorl.common.TestDataActivity"  >
+
+        </activity>
+        <activity
+            android:name="com.zhhl.personnel_contorl.activity.GxrTrajectoryActivity"
+            android:theme="@style/MyTranslucentTheme" />
+        <activity
+            android:name="com.zhhl.personnel_contorl.activity.UnlockActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/FullScreenTheme" />
+        <activity android:name="com.zhhl.personnel_contorl.mvp.view.activities.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <data android:scheme="com.xx.aa"/>
+                <!--<category android:name="android.intent.category.DEFAULT" />-->
+            </intent-filter>
+        </activity>
+        <!--新加的-->
+        <activity
+            android:name="com.zhhl.personnel_contorl.xinjia.Xinjia_activity"
+            android:theme="@style/AppThemeNo"/>
+
+        <receiver
+            android:name="com.zhhl.personnel_contorl.receiver.UnLockReceiver"
+            android:enabled="false"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_UNLOCKED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.zhhl.personnel_contorl.notification.NotificationService"
+            android:enabled="true"
+            android:exported="false"
+            android:process="com.zhhl.personnel_contorl.notification" />
+
+
+        <service
+            android:name="com.zhhl.personnel_contorl.notification.HeartBeatService"
+            android:enabled="true"
+            android:exported="false"
+            android:process="com.zhhl.personnel_contorl.heartbeat" />
+        <service
+            android:name="com.zhhl.personnel_contorl.notification.WeakUpService"
+            android:enabled="true"
+            android:exported="false"
+            android:process="com.zhhl.personnel_contorl.weakup" />
+    </application>
+
+</manifest>

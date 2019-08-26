@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RadioGroup
+    android:layout_marginTop="15dp"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RadioButton
+        android:layout_marginLeft="8dp"
+        android:textColor="@drawable/radiobutton_textcolor_xin"
+        android:id="@+id/redio_btn1"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_weight="1"
+        android:checked="true"
+        android:button="@null"
+        android:background="@drawable/radiobutton_background_xin"
+        android:gravity="center"
+        android:text="已管控" />
+
+    <RadioButton
+        android:textColor="@drawable/radiobutton_textcolor_xin"
+
+        android:id="@+id/redio_btn2"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_weight="1"
+        android:background="@drawable/radiobutton_background_xin"
+
+        android:button="@null"
+        android:gravity="center"
+        android:text="已劝回" />
+
+    <RadioButton
+        android:textColor="@drawable/radiobutton_textcolor_xin"
+        android:layout_marginRight="@dimen/dp_8"
+        android:id="@+id/redio_btn3"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@drawable/radiobutton_background_xin"
+
+        android:button="@null"
+        android:text="已带离" />
+</RadioGroup>
+
+    <EditText
+        android:gravity="top"
+        android:background="@drawable/xinjia_edittext_bg"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_8"
+        android:layout_marginLeft="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_150" />
+
+</LinearLayout>

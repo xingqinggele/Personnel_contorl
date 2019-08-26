@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:fitsSystemWindows="false"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="92dp"
+        android:background="@drawable/select_bg"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="请选择数据模型"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_alignStart="@+id/title"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/tip_bg_shape"
+        android:text="合理的选择有助于我们为您提供更精准的服务"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_10"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <ImageView
+        android:id="@+id/shangfang"
+        android:layout_width="@dimen/dp_101"
+        android:layout_height="@dimen/dp_87"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/item_zdsfry"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:contentDescription="TODO" />
+
+    <ImageView
+        android:id="@+id/concernedWithDrugs"
+        android:layout_width="@dimen/dp_101"
+        android:layout_height="@dimen/dp_87"
+        android:layout_alignEnd="@+id/title"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="52dp"
+        android:src="@drawable/item_sdry"
+        app:layout_constraintStart_toStartOf="@+id/shangfang"
+        app:layout_constraintTop_toTopOf="@+id/shangfang" />
+
+    <ImageView
+        android:id="@+id/zaitao"
+        android:layout_width="@dimen/dp_101"
+        android:layout_height="@dimen/dp_87"
+        android:layout_alignEnd="@+id/title"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="52dp"
+        android:src="@drawable/item_ztry"
+        app:layout_constraintStart_toStartOf="@+id/concernedWithDrugs"
+        app:layout_constraintTop_toTopOf="@+id/concernedWithDrugs" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="@dimen/dp_101"
+        android:layout_height="@dimen/dp_87"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="52dp"
+        android:src="@drawable/item_hcry"
+        app:layout_constraintStart_toStartOf="@+id/shangfang"
+        app:layout_constraintTop_toTopOf="@+id/cunguan" />
+
+    <ImageView
+        android:id="@+id/cunguan"
+        android:layout_width="@dimen/dp_101"
+        android:layout_height="@dimen/dp_87"
+        android:layout_alignEnd="@+id/title"
+        android:layout_alignParentTop="true"
+
+        android:layout_marginTop="52dp"
+        android:src="@drawable/item_hcg"
+        app:layout_constraintStart_toStartOf="@+id/concernedWithDrugs"
+        app:layout_constraintTop_toTopOf="@+id/zaitao" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
